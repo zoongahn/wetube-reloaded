@@ -8,7 +8,7 @@
         "url": "git+https://github.com/zoongahn/wetube-reloaded.git"
     },
     "scripts": {
-        "dev": "nodemon --exec babel-node src/index.js"
+        "dev": "nodemon --exec babel-node src/server.js"
     },
     "author": "Joonghyun Ahn",
     "license": "MIT",
@@ -17,7 +17,8 @@
     },
     "homepage": "https://github.com/zoongahn/wetube-reloaded#readme",
     "dependencies": {
-        "express": "^4.18.2"
+        "express": "^4.18.2",
+        "morgan": "^1.10.0"
     },
     "devDependencies": {
         "@babel/core": "^7.23.3",
