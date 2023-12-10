@@ -1,0 +1,9 @@
+extends base.pug
+
+block content
+    h3 Welcome here you will see the trening videos
+    ul
+        each video in videos 
+            li=video.title
+        else 
+            li Sorry Nothing Found

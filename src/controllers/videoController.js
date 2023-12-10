@@ -1,15 +1,19 @@
-export const trending = (req, res) => res.send("Trending Videos")
-export const see = (req, res) => {
-    console.log(req.params)
-    return res.send(`Watch Video #${req.params.id}`)
+export const trending = (req, res) => {
+    const videos = [
+        {
+            title: "Hello",
+        },
+        {
+            title: "Video #2",
+        },
+        {
+            title: "Whatsup",
+        },
+    ]
+    return res.render("home", { pageTitle: "Home", videos })
 }
-export const edit = (req, res) => {
-    console.log(req.params)
-    return res.send("Edit Videos")
-}
+export const see = (req, res) => res.render("watch", { pageTitle: "Watch Videos" })
+export const edit = (req, res) => res.render("edit", { pageTitle: "Edit Video" })
 export const search = (req, res) => res.send("Search")
-export const deleteVideo = (req, res) => {
-    console.log(req.params)
-    return res.send("Delete Video")
-}
+export const deleteVideo = (req, res) => res.send("Delete Video")
 export const upload = (req, res) => res.send("Upload")
