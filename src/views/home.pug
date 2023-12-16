@@ -1,9 +1,9 @@
 extends base.pug
+include mixins/video
 
 block content
-    h3 Welcome here you will see the trening videos
-    ul
-        each video in videos 
-            li=video.title
-        else 
-            li Sorry Nothing Found
+    h2 Welcome here you will see the trending videos
+    each v in videos 
+        +video(v)
+    else 
+        li Sorry Nothing Found
